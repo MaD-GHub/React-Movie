@@ -1,0 +1,36 @@
+/* src/components/Header.css */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color:  #d44c4c ;
+    color: white;
+}
+
+.logo img {
+    height: 90px; 
+    width: 100px;
+}
+
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px; /* Ajustar el margen izquierdo para centrar mejor */
+}
+
+.nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold; /* Poner el texto en negrita */
+}
+
+.search-bar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+}

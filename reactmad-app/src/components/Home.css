@@ -1,0 +1,71 @@
+/* src/components/Home.css */
+
+/* Contenedores flexibles para las listas de películas y series */
+.movies-container,
+.shows-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Cambiar a space-around para mejor distribución */
+    gap: 20px;
+}
+
+/* Estilos para las tarjetas de películas y series */
+.movie-card,
+.show-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 16%; /* Ajustar para mostrar 5 por línea */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagen en las tarjetas de películas y series */
+.movie-card img,
+.show-card img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+/* Títulos y detalles en las tarjetas de películas y series */
+.movie-card h3,
+.show-card h3,
+.movie-card .details,
+.show-card .details {
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para el texto de los géneros */
+.genre-text {
+    font-weight: bold;
+}
+
+/* Estilos para el botón "Ver más" */
+.more-info-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #b73a36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-info-btn:hover {
+    background-color: #8a2a26;
+}

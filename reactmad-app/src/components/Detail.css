@@ -1,0 +1,47 @@
+/* src/components/Detail.css */
+
+.detail {
+    display: flex;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.poster {
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.info {
+    max-width: 600px;
+}
+
+.info h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info li {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
