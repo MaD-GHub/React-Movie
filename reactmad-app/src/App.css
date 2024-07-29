@@ -1,15 +1,103 @@
+/* src/App.css o src/Detail.css */
+/* index.css o App.css */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
 /* src/App.css */
-.App {
-  text-align: center;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff; /* Fondo original */
+  color: #000; /* Texto original */
+  font-family: 'Arial', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  padding-top: 70px; /* Ajustar según la altura del header */
+  padding-bottom: 70px; /* Ajustar según la altura del footer */
+}
+
+
+
+.detail {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #f0f0f0;
+  min-height: 100vh;
+  padding-top: 70px; /* Ajustar según la altura del header */
+  padding-bottom: 70px; /* Ajustar según la altura del footer */
 }
+
+.detail-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.85);
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.poster {
+  border-radius: 8px;
+  margin-right: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.info {
+  max-width: 600px;
+  text-align: left;
+  margin-top: 0;
+}
+
+.info h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info li {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.trailer-section {
+  width: 100%;
+  max-width: 800px;
+}
+
+.trailer-section h3 {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+

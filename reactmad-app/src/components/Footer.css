@@ -1,0 +1,30 @@
+/* src/components/Footer.css */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #d44c4c; /* Fondo de color */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fijar el footer */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegurar que el footer esté por encima de otros elementos */
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    height: 30px;
+}
+
+.footer-text {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    color: #fff; /* Texto blanco */
+}

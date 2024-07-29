@@ -2,38 +2,11 @@
 
 .search-results {
     padding: 20px;
-    text-align: center;
-    background-color: #f0f0f0;
 }
 
 .results-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
-}
-
-.result-card {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-    background-color: white;
-}
-
-.result-card img {
-    border-radius: 8px;
-    width: 100%;
-}
-
-.result-card h3 {
-    font-size: 1rem;
-    margin: 10px 0 0;
-}
-
-.result-card:hover {
-    transform: scale(1.05);
 }

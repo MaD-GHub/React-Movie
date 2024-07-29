@@ -5,7 +5,6 @@ import api from '../api';
 import { FaStar, FaStarHalfAlt, FaRegStar, FaFilm } from 'react-icons/fa';
 import './Home.css';
 
-// Función para convertir la valoración en estrellas
 const getStars = (rating) => {
     const fullStars = Math.floor(rating / 2);
     const halfStar = rating % 2 >= 1 ? true : false;
@@ -19,12 +18,10 @@ const getStars = (rating) => {
     );
 };
 
-// Función para mapear IDs de géneros a nombres
 const getGenreNames = (genreIds, genres) => {
     return genreIds.map(id => genres.find(genre => genre.id === id)?.name).join(', ');
 };
 
-// Componente Home que muestra las películas y series más populares
 const Home = () => {
     const [movies, setMovies] = useState([]);
     const [shows, setShows] = useState([]);

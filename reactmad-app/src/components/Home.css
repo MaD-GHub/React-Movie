@@ -54,7 +54,7 @@
     font-weight: bold;
 }
 
-/* Estilos para el botón "Ver más" */
+/* Estilo para el botón "Ver más" */
 .more-info-btn {
     margin-top: 10px;
     padding: 5px 10px;
@@ -68,4 +68,20 @@
 
 .more-info-btn:hover {
     background-color: #8a2a26;
+}
+
+/* Estilos para los títulos */
+.home h1 {
+    display: flex;
+    align-items: center;
+    text-align: left; /* Alinear a la izquierda */
+    font-size: 1.5rem; /* Ajustar el tamaño según sea necesario */
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Asegurar el espacio para el header fijo */
+.home {
+    padding-top: 100px; /* Ajustar según la altura del header */
+    padding-bottom: 70px; /* Ajustar según la altura del footer */
 }

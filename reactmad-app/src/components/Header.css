@@ -1,36 +1,73 @@
 /* src/components/Header.css */
+
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color:  #d44c4c ;
-    color: white;
+    background-color: #d44c4c; /* Fondo de color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fijar el header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegurar que el header esté por encima de otros elementos */
+    box-sizing: border-box;
 }
 
-.logo img {
-    height: 90px; 
-    width: 100px;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    width: 70px; /* Ajustar el ancho del logo */
+}
+
+.divider {
+    width: 2px;
+    height: 80px; /* Ajustar según el tamaño del logo */
+    background-color: rgba(0, 0, 0, 0.5); /* Negro transparente */
+    margin-left: 10px; /* Ajustar el espacio entre el logo y la línea */
 }
 
 .nav {
     flex: 1;
     display: flex;
-    justify-content: flex-start;
-    padding-left: 20px; /* Ajustar el margen izquierdo para centrar mejor */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    margin-left: 20px; /* Espacio entre la línea divisoria y el texto de inicio */
 }
 
 .nav a {
-    color: white;
-    margin: 0 10px;
     text-decoration: none;
+    color: #fff; /* Texto blanco */
     font-size: 1.2rem;
-    font-weight: bold; /* Poner el texto en negrita */
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Alinear la barra de búsqueda a la izquierda del contenedor derecho */
+    margin-right: 40px; /* Ajustar el margen derecho para que no esté pegado al borde */
+}
+
+.search-bar form {
+    display: flex;
+    align-items: center;
 }
 
 .search-bar input {
-    padding: 5px;
+    padding: 5px 10px; /* Ajustar padding */
+    font-size: 1rem;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    border: none;
-    width: 200px;
+    width: 150px; /* Ajustar el ancho de la barra de búsqueda */
+}
+
+.search-icon {
+    margin-right: 5px;
+    color: #333;
 }

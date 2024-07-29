@@ -1,0 +1,49 @@
+/* src/components/TrailerCarousel.css */
+
+.trailer-carousel {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1; /* Asegurar que esté por encima de otros elementos */
+}
+
+.trailer-slide {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+}
+
+.trailer-slide iframe {
+    width: 100%; /* Ajustar el ancho para llenar el contenedor */
+    height: 450px; /* Ajustar la altura para ocupar más espacio hacia abajo */
+    border-radius: 8px;
+}
+
+/* Estilos para los puntos del carrusel */
+.slick-dots {
+    bottom: -30px; /* Ajustar la posición de los puntos */
+}
+
+.slick-dots li {
+    margin: 0 5px; /* Agregar margen entre los puntos */
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    color: black;
+}
+
+.slick-dots li.slick-active button:before {
+    color: black;
+}
+
+/* Estilos para los iconos personalizados */
+.custom-dot {
+    font-size: 20px;
+    color: black;
+}
+
+.slick-dots li.slick-active .custom-dot {
+    color: #d44c4c; /* Color para el icono activo */
+}
