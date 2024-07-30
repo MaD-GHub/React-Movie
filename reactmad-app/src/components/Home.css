@@ -82,6 +82,6 @@
 
 /* Asegurar el espacio para el header fijo */
 .home {
-    padding-top: 100px; /* Ajustar según la altura del header */
+    padding-top: 30px; /* Ajustar según la altura del header */
     padding-bottom: 70px; /* Ajustar según la altura del footer */
 }

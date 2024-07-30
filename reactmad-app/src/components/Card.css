@@ -1,6 +1,6 @@
 /* src/components/Card.css */
 
-.card {
+.movie-card {
     margin: 10px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -14,15 +14,13 @@
     align-items: center;
 }
 
-.card img {
+.movie-card img {
     border-radius: 8px;
     width: 100%;
     height: auto;
 }
 
-.card h3,
-.card .details,
-.card .details {
+.movie-card h3 {
     font-size: 1rem;
     margin-top: 10px;
     text-align: center;
@@ -32,10 +30,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.genre-text {
-    font-weight: bold;
 }
 
 .more-info-btn {

@@ -1,5 +1,3 @@
-/* src/components/Detail.css */
-
 .detail {
     display: flex;
     flex-direction: column;
@@ -24,11 +22,37 @@
     margin-bottom: 20px;
 }
 
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
 .poster {
     border-radius: 8px;
-    margin-right: 20px;
     max-width: 300px;
     width: 100%;
+}
+
+.rating-box {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    margin-left: -20px; /* Mover el cuadro a la izquierda */
+}
+
+.rating-box h3 {
+    margin: 5px 0;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .info {
@@ -64,8 +88,17 @@
 }
 
 .info li {
+    display: flex;
+    align-items: center;
     font-size: 1rem;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.actor-photo {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
 }
 
 .trailer-section {

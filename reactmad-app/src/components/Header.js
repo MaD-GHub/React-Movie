@@ -1,7 +1,6 @@
-// src/components/Header.js
 import React, { useState } from 'react';
 import './Header.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 
 const Header = () => {
@@ -22,7 +21,8 @@ const Header = () => {
                 <div className="divider"></div>
             </div>
             <nav className="nav">
-                <a href="/">Inicio</a>
+                <Link to="/" className="nav-link">Inicio</Link>
+                <Link to="/categories" className="nav-link">Categorías</Link>
             </nav>
             <div className="search-bar">
                 <form onSubmit={handleSearch}>
