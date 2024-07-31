@@ -5,6 +5,7 @@ import api from '../api';
 import { FaStar, FaStarHalfAlt, FaRegStar, FaFilm } from 'react-icons/fa';
 import './Home.css';
 
+// Función para convertir la valoración en estrellas
 const getStars = (rating) => {
     const fullStars = Math.floor(rating / 2);
     const halfStar = rating % 2 >= 1 ? true : false;
@@ -18,15 +19,16 @@ const getStars = (rating) => {
     );
 };
 
+// Función para mapear IDs de géneros a nombres
 const getGenreNames = (genreIds, genres) => {
     return genreIds.map(id => genres.find(genre => genre.id === id)?.name).join(', ');
 };
 
 const Home = () => {
-    const [movies, setMovies] = useState([]);
-    const [shows, setShows] = useState([]);
-    const [movieGenres, setMovieGenres] = useState([]);
-    const [showGenres, setShowGenres] = useState([]);
+    const [movies, setMovies] = useState([]); // Estado para almacenar las películas populares
+    const [shows, setShows] = useState([]); // Estado para almacenar las series populares
+    const [movieGenres, setMovieGenres] = useState([]); // Estado para almacenar los géneros de películas
+    const [showGenres, setShowGenres] = useState([]); // Estado para almacenar los géneros de series
 
     useEffect(() => {
         const fetchPopular = async () => {
@@ -51,8 +53,8 @@ const Home = () => {
             }
         };
 
-        fetchPopular();
-        fetchGenres();
+        fetchPopular(); // Obtener las películas y series populares
+        fetchGenres(); // Obtener los géneros de películas y series
     }, []);
 
     return (
@@ -67,11 +69,11 @@ const Home = () => {
                         <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
                         <h3>{movie.title}</h3>
                         <div className="details">
-                            {getStars(movie.vote_average)}
+                            {getStars(movie.vote_average)} {/* Mostrar valoración en estrellas */}
                         </div>
                         <p className="details genre-text">Género: {getGenreNames(movie.genre_ids, movieGenres)}</p>
                         <Link to={`/movie/${movie.id}`}>
-                            <button className="more-info-btn">Ver más</button>
+                            <button className="more-info-btn">Ver más</button> {/* Botón para ver más detalles */}
                         </Link>
                     </div>
                 ))}
@@ -86,11 +88,11 @@ const Home = () => {
                         <img src={`https://image.tmdb.org/t/p/w300${show.poster_path}`} alt={show.name} />
                         <h3>{show.name}</h3>
                         <div className="details">
-                            {getStars(show.vote_average)}
+                            {getStars(show.vote_average)} {/* Mostrar valoración en estrellas */}
                         </div>
                         <p className="details genre-text">Género: {getGenreNames(show.genre_ids, showGenres)}</p>
                         <Link to={`/tv/${show.id}`}>
-                            <button className="more-info-btn">Ver más</button>
+                            <button className="more-info-btn">Ver más</button> {/* Botón para ver más detalles */}
                         </Link>
                     </div>
                 ))}

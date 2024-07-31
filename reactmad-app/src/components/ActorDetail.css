@@ -1,6 +1,6 @@
-/* src/components/Detail.css */
+/* src/components/ActorDetail.css */
 
-.detail {
+.actor-detail {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,7 @@
     padding-bottom: 70px; /* Ajustar según la altura del footer */
 }
 
-.detail-container {
+.actor-info {
     display: flex;
     align-items: flex-start;
     padding: 20px;
@@ -24,37 +24,12 @@
     margin-bottom: 20px;
 }
 
-.left-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.actor-photo {
+    border-radius: 8px; /* Borde redondeado */
     margin-right: 20px;
-}
-
-.poster {
-    border-radius: 8px;
-    max-width: 300px;
-    width: 100%;
-}
-
-.rating-box {
-    padding: 10px;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.85);
-    margin-top: 20px;
-    text-align: center;
-    width: 100%;
-    margin-left: -20px; /* Mover el cuadro a la izquierda */
-}
-
-.rating-box h3 {
-    margin: 5px 0;
-}
-
-.stars {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 150px; /* Ajustar el ancho de la imagen */
+    height: 150px; /* Ajustar el alto de la imagen */
+    object-fit: cover; /* Para que la imagen se ajuste y no se deforme */
 }
 
 .info {
@@ -69,34 +44,13 @@
     margin-bottom: 10px;
 }
 
-.info h2 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
 .info p {
     font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.info h3 {
-    font-size: 1.2rem;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
-.info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.info li {
-    display: flex;
-    align-items: center;
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-.trailer-section {
+.actor-movies {
     width: 100%;
     max-width: 800px;
     padding: 20px;
@@ -106,8 +60,44 @@
     margin-top: 20px;
 }
 
-.trailer-section h3 {
+.actor-movies h2 {
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Ajustar el tamaño del texto */
     margin-bottom: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.movie-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 16%; /* Ajustar para mostrar 6 por línea */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.movie-card img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.movie-card h3 {
+    font-size: 1rem;
+    margin-top: 10px;
 }

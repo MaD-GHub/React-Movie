@@ -1,7 +1,8 @@
+// src/components/Header.js
 import React, { useState } from 'react';
 import './Header.css';
-import { useNavigate, Link } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
+import { FaSearch, FaHome, FaFilm, FaUser } from 'react-icons/fa';
 
 const Header = () => {
     const [query, setQuery] = useState('');
@@ -21,8 +22,9 @@ const Header = () => {
                 <div className="divider"></div>
             </div>
             <nav className="nav">
-                <Link to="/" className="nav-link">Inicio</Link>
-                <Link to="/categories" className="nav-link">Categorías</Link>
+                <a href="/"><FaHome className="icon" /> Inicio</a>
+                <a href="/categories"><FaFilm className="icon" /> Categorías</a>
+                <a href="/actors"><FaUser className="icon" /> Actores</a>
             </nav>
             <div className="search-bar">
                 <form onSubmit={handleSearch}>

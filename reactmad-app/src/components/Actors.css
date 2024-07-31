@@ -1,0 +1,64 @@
+/* src/components/Actors.css */
+
+.actors {
+    padding: 20px;
+    background-color: #f0f0f0;
+    min-height: 100vh;
+    padding-top: 70px; /* Ajustar según la altura del header */
+    padding-bottom: 70px; /* Ajustar según la altura del footer */
+}
+
+.actors h1 {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.actors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.actor-card {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 16%; /* Ajustar para mostrar 6 por línea */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.actor-card img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.actor-card h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* Estilo para el botón "Ver más" */
+.more-info-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #b73a36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-info-btn:hover {
+    background-color: #8a2a26;
+}

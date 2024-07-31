@@ -1,5 +1,58 @@
 /* src/components/Home.css */
 
+/* Estilo para la sección destacada */
+.featured {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Aumentar la altura para mostrar más de la imagen */
+    background-color: black;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.featured-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.featured-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px; /* Añadir para ocupar todo el espacio hacia la derecha */
+    color: white;
+}
+
+.featured-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left: 0;
+}
+
+.featured-overview {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    max-width: 100%; /* Ocupar todo el ancho disponible */
+}
+
+.play-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #e50914;
+    color: white;
+    margin-left: 0;
+}
+
+.play-button:hover {
+    background-color: #b00710;
+}
+
 /* Contenedores flexibles para las listas de películas y series */
 .movies-container,
 .shows-container {
@@ -16,7 +69,7 @@
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: 16%; /* Ajustar para mostrar 5 por línea */
+    width: 16%; /* Ajustar para mostrar 6 por línea */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     background-color: white;
@@ -78,10 +131,4 @@
     font-size: 1.5rem; /* Ajustar el tamaño según sea necesario */
     margin-left: 20px;
     margin-bottom: 20px;
-}
-
-/* Asegurar el espacio para el header fijo */
-.home {
-    padding-top: 30px; /* Ajustar según la altura del header */
-    padding-bottom: 70px; /* Ajustar según la altura del footer */
 }

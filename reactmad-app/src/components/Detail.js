@@ -1,3 +1,4 @@
+// src/components/Detail.js
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../api';
@@ -88,11 +89,6 @@ const Detail = () => {
                     <ul>
                         {credits.cast.slice(0, 5).map(member => (
                             <li key={member.cast_id}>
-                                <img 
-                                    className="actor-photo" 
-                                    src={`https://image.tmdb.org/t/p/w45${member.profile_path}`} 
-                                    alt={member.name} 
-                                />
                                 <strong>{member.name}</strong> <span>como:</span> <span>{member.character}</span>
                             </li>
                         ))}

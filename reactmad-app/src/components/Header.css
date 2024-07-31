@@ -1,3 +1,5 @@
+/* src/components/Header.css */
+
 .header {
     display: flex;
     align-items: center;
@@ -19,15 +21,15 @@
 }
 
 .logo {
-    height: 80px;
-    width: 80px; /* Ajustar el ancho del logo */
+    height: 70px;
+    width: 70px; /* Ajustar el ancho del logo */
 }
 
 .divider {
     width: 2px;
     height: 80px; /* Ajustar según el tamaño del logo */
     background-color: rgba(0, 0, 0, 0.5); /* Negro transparente */
-    margin-left: 20px; /* Ajustar el espacio entre el logo y la línea */
+    margin-left: 10px; /* Ajustar el espacio entre el logo y la línea */
 }
 
 .nav {
@@ -43,12 +45,17 @@
     font-size: 1.2rem;
     font-weight: bold;
     margin-right: 20px;
-    transition: color 0.3s, text-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.nav a .icon {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
 }
 
 .nav a:hover {
-    color: black;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    color: #070601; /* Cambiar color al pasar el mouse */
 }
 
 .search-bar {
