@@ -13,10 +13,6 @@ La **React Movie App** es una aplicación web que permite a los usuarios explora
 - **Detalles:** Página de detalle para cada película, serie y actor, que muestra información relevante como el título, género, sinopsis, reparto, trailers, valoración, fecha de estreno y director.
 - **Categorías:** Filtra las películas por género y otras características.
 
-## Capturas de Pantalla
-
-*Incluir capturas de pantalla aquí si es posible*
-
 ## Instalación
 
 1. Clona el repositorio en tu máquina local:
@@ -32,13 +28,7 @@ La **React Movie App** es una aplicación web que permite a los usuarios explora
     npm install
     ```
 
-3. Crea un archivo `.env` en la raíz del proyecto y agrega tu clave API de TMDb:
-
-    ```env
-    REACT_APP_TMDB_API_KEY=tu_api_key_aqui
-    ```
-
-4. Inicia la aplicación:
+3. Inicia la aplicación:
 
     ```bash
     npm start
