@@ -50,6 +50,3 @@ La **React Movie App** es una aplicación web que permite a los usuarios explora
 - **Buscar:** Usa la barra de búsqueda en el encabezado para encontrar películas, series y actores.
 - **Ver detalles:** Haz clic en "Ver más" en una tarjeta de película o serie para ver detalles adicionales.
 - **Filtrar:** Usa la página de categorías para filtrar contenido por género y otras características.
-
-## Estructura del Proyecto
-
