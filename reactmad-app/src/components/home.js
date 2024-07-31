@@ -24,19 +24,27 @@ const getGenreNames = (genreIds, genres) => {
     return genreIds.map(id => genres.find(genre => genre.id === id)?.name).join(', ');
 };
 
+// Función para obtener una película aleatoria de una lista
+const getRandomMovie = (movies) => {
+    return movies[Math.floor(Math.random() * movies.length)];
+};
+
+// Componente Home que muestra las películas y series más populares
 const Home = () => {
-    const [movies, setMovies] = useState([]); // Estado para almacenar las películas populares
-    const [shows, setShows] = useState([]); // Estado para almacenar las series populares
-    const [movieGenres, setMovieGenres] = useState([]); // Estado para almacenar los géneros de películas
-    const [showGenres, setShowGenres] = useState([]); // Estado para almacenar los géneros de series
+    const [movies, setMovies] = useState([]);
+    const [shows, setShows] = useState([]);
+    const [movieGenres, setMovieGenres] = useState([]);
+    const [showGenres, setShowGenres] = useState([]);
+    const [featuredMovie, setFeaturedMovie] = useState(null);
 
     useEffect(() => {
         const fetchPopular = async () => {
             try {
-                const moviesResponse = await api.get('/movie/popular');
+                const moviesResponse = await api.get('/movie/top_rated');
                 const showsResponse = await api.get('/tv/popular');
-                setMovies(moviesResponse.data.results);
-                setShows(showsResponse.data.results);
+                setMovies(moviesResponse.data.results.slice(0, 10));
+                setShows(showsResponse.data.results.slice(0, 10));
+                setFeaturedMovie(getRandomMovie(moviesResponse.data.results));
             } catch (error) {
                 console.error('Error fetching popular movies and shows:', error);
             }
@@ -53,12 +61,30 @@ const Home = () => {
             }
         };
 
-        fetchPopular(); // Obtener las películas y series populares
-        fetchGenres(); // Obtener los géneros de películas y series
+        fetchPopular();
+        fetchGenres();
     }, []);
 
     return (
         <div className="home">
+            {/* Sección destacada al estilo Netflix */}
+            {featuredMovie && (
+                <div className="featured">
+                    <img 
+                        src={`https://image.tmdb.org/t/p/original${featuredMovie.backdrop_path}`} 
+                        alt={featuredMovie.title} 
+                        className="featured-image"
+                    />
+                    <div className="featured-info">
+                        <h1 className="featured-title">{featuredMovie.title}</h1>
+                        <p className="featured-overview">{featuredMovie.overview}</p>
+                        <Link to={`/movie/${featuredMovie.id}`}>
+                            <button className="play-button">Ver más detalles</button>
+                        </Link>
+                    </div>
+                </div>
+            )}
+
             <h1>
                 <FaFilm style={{ marginRight: '10px' }} />
                 Películas Populares
@@ -69,11 +95,11 @@ const Home = () => {
                         <img src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} alt={movie.title} />
                         <h3>{movie.title}</h3>
                         <div className="details">
-                            {getStars(movie.vote_average)} {/* Mostrar valoración en estrellas */}
+                            {getStars(movie.vote_average)}
                         </div>
                         <p className="details genre-text">Género: {getGenreNames(movie.genre_ids, movieGenres)}</p>
                         <Link to={`/movie/${movie.id}`}>
-                            <button className="more-info-btn">Ver más</button> {/* Botón para ver más detalles */}
+                            <button className="more-info-btn">Ver más</button>
                         </Link>
                     </div>
                 ))}
@@ -88,11 +114,11 @@ const Home = () => {
                         <img src={`https://image.tmdb.org/t/p/w300${show.poster_path}`} alt={show.name} />
                         <h3>{show.name}</h3>
                         <div className="details">
-                            {getStars(show.vote_average)} {/* Mostrar valoración en estrellas */}
+                            {getStars(show.vote_average)}
                         </div>
                         <p className="details genre-text">Género: {getGenreNames(show.genre_ids, showGenres)}</p>
                         <Link to={`/tv/${show.id}`}>
-                            <button className="more-info-btn">Ver más</button> {/* Botón para ver más detalles */}
+                            <button className="more-info-btn">Ver más</button>
                         </Link>
                     </div>
                 ))}
